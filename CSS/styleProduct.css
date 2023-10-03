@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
+
+* {
+   font-family: 'Nunito', sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   outline: none;
+   border: none;
+   text-decoration: none;
+   transition: all .2s linear;
+   text-transform: capitalize;
+}
+
+/* colors for all css */
+:root {
+
+
+   --main-color: #087f5b;
+   --primary-color: #2f9e44;
+   --primary-shades: #1d8832;
+   --para-color: #868e96;
+   --hepler-color: #ffec99;
+   --white: #fff;
+   --dark: #6dbb7c;
+   --tree: #2f9e44;
+   --btn: #6dbb7c;
+   --black: #000000;
+   --navbar-text: #59b46a;
+   --more-dark: #005d22;
+   --main: #11503b;
+   --star: #ffbf00;
+
+}
+h2 {
+   text-decoration: none;
+   font-family: cursive;
+   font-weight: 600;
+   font-size: 20px;
+   color: var(--navbar-text);
+
+}
+h4 {
+   text-decoration: none;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 500;
+   font-size: 25px;
+   text-transform: capitalize;
+   color: var(--navbar-text);
+}
+h5{
+   font-family: 'Roboto', sans-serif;
+   font-size: 26px;
+   line-height: 54px;
+   color: var(--btn);
+}
+
+/* header part starting from here */
+#hdr {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   height: 90px;
+   padding: 20px 80px;
+   background: var(--main);
+   box-shadow: 0px 5px 15px var(--tree);
+   position: sticky;
+   z-index: 999;
+   top: 0;
+   left: 0;
+}
+
+/* css for logo img and logo text in navbar */
+.logoimg {
+   height: 80px;
+}
+
+.logo-manage {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+
+.logo {
+   padding: 0 10px;
+   text-decoration: none;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 500;
+   font-size: 25px;
+   color: var(--white);
+}
+
+/* creating navbar starts */
+#navbar {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+#navbar li {
+   list-style: none;
+   padding: 0 20px;
+   position: relative;
+
+}
+
+#navbar li a {
+   text-decoration: none;
+   font-family: 'Lato', sans-serif;
+   font-size: 20px;
+   font-weight: 400;
+   color: var(--white);
+   transition: 0.3s ease;
+}
+
+#navbar li a:hover {
+   color: var(--btn);
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+   color: var(--btn);
+
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+   content: "";
+   width: 30%;
+   height: 2px;
+   background: var(--btn);
+   position: absolute;
+   bottom: -4px;
+   left: 20px;
+
+}
+
+/* for navbar sign up button(css)*/
+
+.btn-navbar {
+
+   display: inline-block;
+   padding: 7px 8px;
+   border: none;
+   border-radius: 160px;
+   color: var(--white);
+   letter-spacing: 1px;
+   transition: all 0.3s;
+   position: relative;
+   overflow: hidden;
+   z-index: 1;
+}
+
+.btn-navbar:after {
+   content: "";
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: var(--navbar-text);
+   color: var(--white);
+   border-radius: 160px;
+   z-index: -2;
+}
+
+.btn-navbar:before {
+   content: "";
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 0%;
+   height: 100%;
+   background-color: var(--main-color);
+   transition: all 0.3s;
+   border-radius: 160px;
+   z-index: -1;
+}
+
+.btn-navbar:hover {
+   color: var(--white);
+}
+
+.btn-navbar:hover:before {
+   width: 100%;
+}
+
+html {
+   font-size: 62.5%;
+   overflow-x: hidden;
+}
+
+body {
+   background: #eee;
+}
+
+/* Style for products page
+Style for container */
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 3rem 2rem;
+}
+
+/* Style for title */
+.container .title {
+   font-size: 3.5rem;
+   color: #444;
+   margin-bottom: 3rem;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+.container .products-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   gap: 16px;
+}
+
+.container .products-container .product {
+   text-align: center;
+   padding: 30px 20px;
+   background: #fff;
+   box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+   outline: 2px solid #ccc;
+   outline-offset: -15px;
+   cursor: pointer;
+}
+
+.container .products-container .product:hover {
+   outline: 2px solid #222;
+   outline-offset: 0;
+}
+
+/* Styling for image */
+.container .products-container .product img {
+   height: 25rem;
+}
+
+.container .products-container .product:hover img {
+   transform: scale(.9);
+}
+
+/* Styling for header in products page*/
+.container .products-container .product h3 {
+   padding: 10px 0;
+   font-size: 20px;
+   color: #444;
+}
+
+.container .products-container .product:hover h3 {
+   color: #27ae60;
+}
+
+/* Styling for price in products page */
+.container .products-container .product .price {
+   font-size: 20px;
+   color: #444;
+}
+
+/* Style for products preview */
+.products-preview {
+   position: fixed;
+   top: 0;
+   left: 0;
+   min-height: 100vh;
+   width: 100%;
+   background: rgba(0, 0, 0, .8);
+   display: none;
+   align-items: center;
+   justify-content: center;
+}
+
+.products-preview .preview {
+   display: none;
+   padding: 20px;
+   text-align: center;
+   background: #fff;
+   position: relative;
+   margin: 20px;
+   width: 490px;
+}
+
+.products-preview .preview.active {
+   display: inline-block;
+}
+
+.products-preview .preview img {
+   height: 300px;
+}
+
+.products-preview .preview .fa-times {
+   position: absolute;
+   top: 10px;
+   right: 15px;
+   cursor: pointer;
+   color: #444;
+   font-size: 40px;
+}
+
+.products-preview .preview .fa-times:hover {
+   transform: rotate(90deg);
+}
+
+.products-preview .preview h3 {
+   color: #444;
+   padding: 10px 0;
+   font-size: 25px;
+}
+
+.products-preview .preview .stars {
+   padding: 10px 0;
+   font-size: 17px;
+}
+
+.products-preview .preview .stars i {
+   color: #27ae60;
+}
+
+.products-preview .preview .stars span {
+   color: #999;
+}
+
+.products-preview .preview p {
+   line-height: 1.5;
+   padding: 10px 0;
+   font-size: 16px;
+   color: #777;
+}
+
+.products-preview .preview .price {
+   padding: 10px 0;
+   font-size: 25px;
+   color: #27ae60;
+}
+
+.products-preview .preview .buttons {
+   display: flex;
+   gap: 15px;
+   flex-wrap: wrap;
+   margin-top: 10px;
+}
+
+.products-preview .preview .buttons a {
+   flex: 1 1 160px;
+   padding: 10px;
+   font-size: 18px;
+   color: #444;
+   border: 1px solid #444;
+}
+
+.products-preview .preview .buttons a.cart {
+   background: #444;
+   color: #fff;
+}
+
+.products-preview .preview .buttons a.cart:hover {
+   background: #111;
+}
+
+.products-preview .preview .buttons a.buy:hover {
+   background: #444;
+   color: #fff;
+}
+
+.list {
+   padding-top: 100px;
+   display: flex;
+   font-size: large;
+   justify-content: center;
+
+}
+
+
+
+
+table {
+   margin-top: 60px;
+   width: 400px;
+   border-collapse: collapse;
+   margin-left: -162px;
+   margin-bottom: 15px;
+}
+
+th {
+   text-align: left;
+}
+
+table,
+th,
+td {
+   border: 1px solid #000;
+}
+
+/* Creating footer section*/
+footer {
+  
+   margin-top: 30px;
+   height: 400px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+
+}
+
+footer .col {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   margin-bottom: 20px;
+ 
+   padding-left: 25px;
+}
+
+
+footer .col .logoimg {
+
+   margin-bottom: 20px;
+}
+
+footer .copyright {
+   width: 100%;
+   text-align: center;
+   padding-bottom: 30px;
+
+}
+
+footer h2 {
+   margin: 0 0 8px 0;
+
+}
+
+footer h4 {
+   font-size: 14px;
+   padding-bottom: 20px;
+}
+
+footer p {
+   font-family: 'Roboto', sans-serif;
+   font-size: 16px;
+   color: var(--primary-color);
+   margin: 15px 0 20px 0;
+   font-size: 13px;
+   margin: 0 0 8px 0;
+}
+
+footer a {
+   font-size: 14px;
+   text-decoration: none;
+   color: var(--primary-color);
+   margin-bottom: 10px;
+   font-family: 'Roboto', sans-serif;
+
+}
+
+footer .follow {
+   margin-top: 20px;
+}
+
+footer .follow i {
+   color: var(--para-color);
+   padding-right: 4px;
+   cursor: pointer;
+   font-size: 30px;
+}
+
+footer .follow i:hover,
+footer a:hover {
+   color: var(--more-dark);
+}
+
+/* tr:nth-child(even){
+   background-color: #777;
+}
+
+tr:nth-child(odd){
+   background-color: beige;
+}
+th{
+   background-color: aquamarine;
+} */

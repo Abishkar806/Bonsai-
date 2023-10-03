@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:ital,wght@0,300;0,400;1,500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+body{
+   background-image: url(/Images/backback.jpg);
+  
+}
+
+
+h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    line-height: 54px;
+    color: rgb(242, 248, 242);
+}
+
+h3 {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: rgb(242, 248, 242);
+}
+
+p {
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+
+
+}
+
+
+
+
+#tabsDiv {
+    margin-left: 35px;
+    height: 440px;
+    border: 2px solid #fffefe;
+    width:1400px;
+
+
+}
+
+#tabsDiv ul {
+    height: 300px;
+    padding: 0px 10px;
+}
+
+#tabsDiv li {
+    width: 15%;
+    height: 108px;
+}
+
+#tabsDiv button {
+    float: left;
+    border: 1px solid #c0c0c0;
+    background-color: #f1f0f4;
+}
+
+/* Button to open the content */
+#tabsDiv button {
+    display: block;
+    background-color: inherit;
+    color: rgb(225, 225, 225);
+    padding: 25px 15px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* Button styling on mouse hover */
+#tabsDiv button:hover {
+    background-color: #0694d0;
+    color: rgb(243, 248, 243);
+}
+
+#tabsDiv button.active {
+    background-color: #3a2fd5;
+    color: white;
+}
+
+/* Content for tabs*/
+.contentClass {
+    display: none;
+    position: absolute;
+    left: 18%;
+    padding: 0px 15px;
+    width: 70%;
+    border-style: none;
+    height: 300px;
+}
+
+.ulClass .linkClass {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+   
+
+}
+/* creating photo and info one */
+
+#tabsDiv #interview .photo{
+    position: absolute;
+  
+}
+   
+
+
+#tabsDiv #interview .info{
+    position: absolute;
+    top: 50px;
+    right: -83px;
+}
+#tabsDiv #interview .info img{
+    height: 400px;
+    width: 790px;
+    padding-bottom: 36px;
+}
+
+/* creating photo and info two */
+#tabsDiv #practice .photo{
+    position: absolute;
+  
+}
+   
+
+
+#tabsDiv #practice .info{
+    position: absolute;
+    top: 50px;
+    right: -83px;
+}
+#tabsDiv #practice .info img{
+    height: 400px;
+    width: 790px;
+    padding-bottom: 36px;
+}
+/* creating photo and info three */
+
+#tabsDiv #python .photo{
+    position: absolute;
+  
+}
+   
+
+
+#tabsDiv #python .info{
+    position: absolute;
+    top: 50px;
+    right: -83px;
+}
+#tabsDiv #python .info img{
+    height: 400px;
+    width: 790px;
+    padding-bottom: 36px;
+}
+
+/* creating photo and info four */
+#tabsDiv #algorithms .photo{
+    position: absolute;
+  
+}
+   
+
+
+#tabsDiv #algorithms .info{
+    position: absolute;
+    top: 50px;
+    right: -83px;
+}
+#tabsDiv #algorithms .info img{
+    height: 400px;
+    width: 790px;
+    padding-bottom: 36px;
+}
+
+
+
+

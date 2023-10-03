@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title> bonsai plants</title>
+  <!-- external css -->
+  <link rel="stylesheet" href="/CSS/formstyle.css" />
+  <!-- internal css -->
+  <style>
+    body {
+  background-image: url("/images/bonsai.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+
+}
+  </style>
+  
+  
+</head>
+<body>
+  <!-- sign up part -->
+   
+   <div class="container" id="container"> 
+    <div class="form-container sign-up-container">
+      <form onsubmit=" validateSignInForm(); return fale;"">
+        <h1>Create Account</h1>
+        <span>Create an account for free </span>
+        <input type="text" placeholder="Name" />
+        <input type="Text" placeholder="Username" />
+        <input type="password" placeholder="Password" />
+        <button>Sign Up</button>
+       
+      </form>
+    </div>
+     <div class="form-container sign-in-container">  
+      <form onsubmit=" validateSignInForm(); return false;">
+        <!-- sign in part -->
+        <h1>Sign In</h1>
+        <span>Already have account ? </span>
+        <input type="text" name="Username" placeholder="Username" />
+        <input type="password"name="Password" placeholder="Password" />
+        <button>Sign In</button>
+      </form>
+    </div>
+    
+    <script>
+      function validateSignInForm() {
+        var text = document.getElementsByName("Username")[0].value;
+        var password = document.getElementsByName("Password")[0].value;
+        var message ="";
+        if (text ==="" || password === "") {
+          message ="Both Username and password fields are required.";
+          alert(message);
+        } else if (text === "Admin" && password === "Password") {
+          window.location.href = "/Html/Index.html";
+        } else{
+          alert ("incorrect username or password");
+        }
+      }
+      </script>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <!-- message show in sign in part -->
+            <h1>Welcome Back</h1>
+            <p> If you already have account please login to keep connected with us</p>
+            <button class="ghost" id="signIn">Sign In</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <!-- message show in sign up part -->
+            <h1>Hello Friend</h1>
+            <p>Don't have account ? Please sign up with your personal details to connect with us ! </p>
+            <button class="ghost" id="signUp">Sign Up</button>
+          </div>
+        </div>
+      </div>
+      <!-- external javascript -->
+      <script src="/Javascript/formScript.js"></script>
+      
+  </body>
+  
+  </html>
+      
+      
+      
+      
+      
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
